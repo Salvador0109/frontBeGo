@@ -1,0 +1,16 @@
+.header-container{
+    // background-color: red;
+    // width: 349px;
+    // height: 27.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    h1{
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 20px;
+    }
+}
