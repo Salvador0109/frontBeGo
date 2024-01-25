@@ -1,13 +1,26 @@
 button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     text-align: left;
     padding: 20px;
-    width: 100%;
     background: linear-gradient(45deg, #080C0F 0%, rgba(85,85,85,0) 100%);
     border:none;
     border-radius: 6px;
     color:white;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
 }
 
 .pickup-data-info{
     color:white;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }

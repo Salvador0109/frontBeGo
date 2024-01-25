@@ -1,18 +1,31 @@
 <!-- <app-header [title]="title"></app-header> -->
-<app-order-detail></app-order-detail>
+<app-order-detail [number_order]="number_order" 
+                  [number_reference]="numberReference"
+                  [destination_pickup]="destinationPickup"
+                  [destination_dropoff]="destinationDropoff"
+                  [pickup_status]="pickupStatus"
+                  [dropoff_status]="dropoffStatus"
+                  [pickup_status_class]="pickupStatusClass"
+                  [dropoff_status_class]="dropoffStatusClass"
+                  >
+</app-order-detail>
+
 <app-track-card></app-track-card>
 
 
+<br>
 <div class="pickup-data">
-    <button (click)="open()">Pickup Data</button>
+    <button (click)="open()">Pickup Data
+        <img [class.rotate]="openBnd" src="../../../../assets/inspect/App BeGo/Contenedores/Cargo Details Upcoming/angle-small-down.svg" alt="">
+    </button>
 
     <div class="pickup-data-info">
         @if (openBnd) {
         <ng-container>
-            <p>Isidro Fabela 10, Valle Verde Y Terminal, <br>50140 Toluca de Lerdo, México.</p>
-            <p>14 de Octubre 2023 10:30</p>
-            <p>+52 55 67 89 0346</p>
-            <p>johndoe&#64;gmail.com</p>
+            <p>{{destinationPickup}}</p>
+            <p>{{startDateformat}} {{startDateformatHour}}</p>
+            <p>{{pickupPhone}}</p>
+            <p>{{pickupEmail}}</p>
         </ng-container>
         }
 

@@ -1,26 +1,37 @@
 <div class="order-reference-container">
     <div class="order-reference-body">
         <div class="order-reference-header">
-            <p class="or-reference">Referencia A1180</p>
-            <p class="or-order">Order #7804GNZ</p>    
+            <p class="or-reference">Referencia {{number_reference}}</p>
+            <p class="or-order">Order #{{number_order}}</p>    
         </div>
         <div class="order-reference-address">
             <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Order 1/where to/address/Group 2.svg " alt="group">
             <div class="or-line-address"></div>
             <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Order 1/where to/address/marker.svg" alt="marker">
         </div>
-        <div class="order-reference-pickup">
 
+        
+        <div class="order-reference-pickup">
             <p class="or-pickup-p">Pickup</p>
-            <p class="or-pickup-state">New York</p>
-            <p class="or-pickup-street">25 Mortada street, Gainakes..</p>
-            <p class="or-status-pickup">Accepted</p>
+            <p class="or-pickup-state">{{destination_pickup}}</p>
+            <!-- <p class="or-pickup-street">25 Mortada street, Gainakes..</p> -->
+            <div class="or-status-pickup">
+                <div [ngClass]="pickup_status_class"></div>
+                <p>{{pickup_status}}</p>
+            </div>
+            <!-- <p class="or-status-pickup">{{pickup_status}}</p> -->
+        
         </div>
+
+
+
         <div class="order-reference-dropoff">
             <p class="or-dropoff-p">Dropoff</p>
-            <p class="or-dropoff-state">New York</p>
-            <p class="or-dropoff-street">1789 NJ-27, Edison, 08817...</p>
-            <p class="or-status-dropoff">On hold</p>
+            <p class="or-dropoff-state">{{destination_dropoff}}</p>
+            <div class="or-status-dropoff">
+                <div [ngClass]="dropoff_status_class"></div>
+                <p>{{dropoff_status}}</p>
+            </div>
         </div>
     </div>
 </div>

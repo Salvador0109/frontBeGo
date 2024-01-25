@@ -10,11 +10,12 @@
 </div>
 
 <!-- Searcher -->
-<div class="search-container">
-    <input type="text" placeholder="Search..">
-</div>
-
 @if(!bndDetail){
+    <ng-container>
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+        </div>
+        </ng-container>
 @for (order of data; track $index) {
     <app-cargo-orders [number_order]="order.orderNumber" 
                       [type]="order.type" 
@@ -29,5 +30,18 @@
 
 
 @if (bndDetail) {
-    <app-cargo-details></app-cargo-details>
+    <app-cargo-details [number_order]="dataDetail.orderNumber" 
+                       [numberReference]="dataDetail.referenceNumber"
+                       [destinationPickup]="dataDetail.destinationPickup"
+                       [destinationDropoff]="dataDetail.destinationDropoff"
+                       [pickupStatus]="dataDetail.pickupStatus"
+                       [dropoffStatus]="dataDetail.dropoffStatus"
+                       [pickupStatusClass]="dataDetail.pickupStatusClass"
+                       [dropoffStatusClass]="dataDetail.dropoffStatusClass"
+                       
+                       [pickupStartDate]="dataDetail.pickupStartDate"
+                       [pickupPhone]="dataDetail.pickupPhone"
+                       [pickupEmail]="dataDetail.pickupEmail"
+                       >
+    </app-cargo-details>
 }

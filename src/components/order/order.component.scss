@@ -25,7 +25,8 @@
         .order-body{
             // padding:40px 20px 0px 10px;
             .address{
-                padding:40px 20px 0px 10px;
+                // background-color: red;
+                padding:20px 10px 0px 10px;
                 position: absolute;
                 display: flex;
                 flex-direction: column;
@@ -40,11 +41,11 @@
             }
             .pickup{
                 // background-color: blue;
-                padding-top: 30px;
-                padding-left: 20px;
+                padding-top: 20px;
+                padding-left: 70px;
                 position: relative;
-                width:calc(100% - 10%);
-                left:calc(10%);
+                width:calc(100%);
+                // left:calc(10%);
                 p{
                     margin-bottom: 0.1em;
                     margin-top: 0.1em;
@@ -63,10 +64,10 @@
                     letter-spacing: 0;
                     line-height: 14px;
                     width: 60%;
-                    // display: -webkit-box;
-                    // -webkit-line-clamp: 1;
-                    // -webkit-box-orient: vertical;  
-                    // overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
                 }
                 .pickup-street{
                     font-size: 14px;
@@ -76,10 +77,11 @@
                 }
                 .pickup-date{
                     // color:red;
+                    // background-color: red;
                     position:absolute;
                     width: fit-content;
-                    margin-right: 40px;
-                    padding-top: 30px;
+                    margin-right:90px;
+                    padding-top:12px;
                     right:0;
                     top:10px;
                     .date-day{
@@ -99,11 +101,11 @@
             .dropoff{
                 position: relative;
                 margin-top: 0.2em;
-                padding-top:20px;
-                padding-left:20px;
+                padding-top:40px;
+                padding-left:70px;
                 // background-color: red;
-                width:calc(100% - 10%);
-                left:calc(10%);
+                width:calc(100%);
+                // left:calc(10%);
                 p{
                     margin-bottom: 0.2em;
                     margin-top: 0.2em;
@@ -122,6 +124,10 @@
                     letter-spacing: 0;
                     line-height: 14px;
                     width: 60%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;  
+                    overflow: hidden;
                 }
                 .dropoff-street{
                     font-size: 14px;
@@ -133,9 +139,8 @@
                 .dropoff-date{
                     position:absolute;
                     right:0;
-                    top:10px; 
-                    margin-right: 40px;
-                    padding-top: 22px;
+                    top:35px; 
+                    margin-right: 90px;
                     .date-day{
                         color:#979797;
                         font-size: 12px;
