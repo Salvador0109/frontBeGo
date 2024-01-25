@@ -14,16 +14,15 @@ export class CargoOrdersComponent{
 
   @Input() number_order!:string;
   @Input() type!:string;
-  
-  @Output() emitNumberOrder = new EventEmitter<string>();
-  @Output() emitType = new EventEmitter<string>();
+  @Input() destinationPickup!:string;
+  @Input() destinationDropoff!:string;
+  @Input() start_date!:string;
+  @Input() end_date!:string;
+  @Output() resumeClicked = new EventEmitter<void>();
 
-  
-  public numberOrder(){
-    this.emitNumberOrder.emit(this.number_order);
-    this.emitType.emit(this.type);
-
+  onResumeClicked() {
+    this.resumeClicked.emit();
   }
-}
 
+}
 

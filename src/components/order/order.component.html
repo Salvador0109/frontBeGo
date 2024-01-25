@@ -23,29 +23,30 @@
             <!-- Información de pickup -->
             <div class="pickup">
                 <p class="pickup-p">Pickup</p>
-                <p class="pickup-state">New York</p>
-                <p class="pickup-street">25 Mortada street, Gainakes..</p>
+                <p class="pickup-state">{{destinationPickup}}</p>
+                <!-- <p class="pickup-street">25 Mortada street, Gainakes..</p> -->
                 <div class="pickup-date">
-                    <p class="date-day">01/04/23</p>
-                    <p class="hour">10:45</p>
+                    <!-- <p>{{startDateformat}}</p> -->
+                    <p class="date-day">{{startDateformat}}</p>
+                    <p class="hour">{{startDateformatHour}}</p>
                 </div>
             </div>
             
             <!-- Información de dropoff -->
             <div class="dropoff">
                 <p class="dropoff-p">Dropoff</p>
-                <p class="dropoff-state">New York</p>
-                <p class="dropoff-street">1789 NJ-27, Edison, 08817...</p>
+                <p class="dropoff-state">{{destinationDropoff}}</p>
+                <!-- <p class="dropoff-street">1789 NJ-27, Edison, 08817...</p> -->
                 <div class="dropoff-date">
-                    <p class="date-day">01/04/23</p>
-                    <p class="hour">17:30</p>
+                    <p class="date-day">{{endDateformat}}</p>
+                    <p class="hour">{{endDateformatHour}}</p>
                 </div>
             </div>
 
             <!-- Botones -->
             <div class="buttons">
                 <button>It's time for pickup</button>
-                <button>
+                <button (click)="onResumeClick()">
                     Resume
                     <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Group 4-1/eye.svg" alt="">
                 </button>

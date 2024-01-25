@@ -1,2 +1,11 @@
 <!-- Order -->
-<app-order [numberOrder]="number_order" [type]="type"></app-order>
+<app-order [numberOrder]="number_order" 
+           [type]="type" 
+           [destinationPickup]="destinationPickup" 
+           [destinationDropoff]="destinationDropoff"
+           [start_date]="start_date"
+           [end_date]="end_date"
+           (resumeClicked)="onResumeClicked()"
+           >
+</app-order>
+

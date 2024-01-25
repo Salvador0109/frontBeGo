@@ -10,6 +10,8 @@ export interface data{
   type:string;
   destinationPickup:string;
   destinationDropoff:string;
+  start_date:string;
+  end_date:string;
 }
 
 @Component({
@@ -20,18 +22,34 @@ export interface data{
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  public orderNumber: string[] = [];
-  public type       : string[] = [];
+  // public orderNumber: string[] = [];
+  // public type       : string[] = [];
   public title = "Cargo Orders";
   public data: data[] = [];
-
+  public bndDetail!:boolean;
+  public bndBack:boolean = true;
   constructor(
     private api: ApiService
   ){}
 
   ngOnInit(): void {
     this.listDataUpcoming();
-    this.listDataOrders();
+  }
+  public resumeClickedHome(){
+    this.bndDetail = true;
+    this.changetitle();
+  }
+  public onBack(){
+    this.bndDetail = false;
+    this.changetitle();
+
+  }
+  public changetitle(){
+    if(this.bndDetail){
+      this.title="Cargo Details"
+    } else {
+      this.title="Cargo Orders"
+    }
   }
 
   public listDataUpcoming(){
@@ -43,18 +61,21 @@ export class HomeComponent implements OnInit {
           //   orderNumber: result.result.map((order: { order_number: any; }) => order.order_number),
           //   type: result.result.map((type: { type: any; }) => type.type)
           // }
-          this.data = result.result.map((order: { order_number: any; type: any; destinatioPickup: any; destinationDropoff:any }) => {
+          this.data = result.result.map((order: { order_number: any; type: any; destinations: any; start_date: any; end_date:any}) => {
             return {
               orderNumber: order.order_number,
               type: order.type,
-              // destinatioPickup: order.
+              destinationPickup: order.destinations[0].address,
+              destinationDropoff: order.destinations[1].address,
+              start_date: order.start_date,
+              end_date: order.end_date
             };
           });
 
-          // this.orderNumber= result.result.map((order: { order_number: any; }) => order.order_number);
+
 
         }
-
+        console.log("this.data..", this.data);
       }, error:(error)=>{
         console.log("Ocurrio un error...", error);
       }

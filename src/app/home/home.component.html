@@ -1,6 +1,6 @@
 
 <!-- Header -->
-<app-header [title]="title"></app-header>
+<app-header [title]="title" (backClicked)="onBack()"></app-header>
 
 <!-- Upcoming-Completed-Past -->
 <div class="tabs-container">
@@ -14,9 +14,20 @@
     <input type="text" placeholder="Search..">
 </div>
 
+@if(!bndDetail){
 @for (order of data; track $index) {
-    <app-cargo-orders [number_order]="order.orderNumber" [type]="order.type"></app-cargo-orders>
+    <app-cargo-orders [number_order]="order.orderNumber" 
+                      [type]="order.type" 
+                      [destinationPickup]="order.destinationPickup" 
+                      [destinationDropoff]="order.destinationDropoff"
+                      [start_date]="order.start_date"
+                      [end_date]="order.end_date"
+                      (resumeClicked)="resumeClickedHome()"
+    ></app-cargo-orders>
+}
 }
 
 
-<!-- <app-cargo-details></app-cargo-details> -->
+@if (bndDetail) {
+    <app-cargo-details></app-cargo-details>
+}
