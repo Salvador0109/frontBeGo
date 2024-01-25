@@ -1,12 +1,12 @@
 <!-- Container principal -->
 <div class="order-container">
-    <p>Order #(API)</p>
+    <p>Order #{{numberOrder}}</p>
     <!-- Container rectangulo -->
     <div class="order-rectangle">
         <!-- Container header -->
         <div class="order-header">
             <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Order 1/header/FCL/freight.svg" alt="freight">
-            <p>FLC</p>
+            <p>{{type}}</p>
             <p>In transit</p>
         </div>
 
@@ -45,7 +45,10 @@
             <!-- Botones -->
             <div class="buttons">
                 <button>It's time for pickup</button>
-                <button>Resume</button>
+                <button>
+                    Resume
+                    <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Group 4-1/eye.svg" alt="">
+                </button>
             </div>
             
         </div>

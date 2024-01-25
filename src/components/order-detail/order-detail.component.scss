@@ -1,0 +1,179 @@
+.order-reference-container{
+    width: 100%;
+    height: auto;
+    // background-color: blue;
+    background: linear-gradient(44.99999945233901deg, #080C0F, rgba(39,39,39,0));
+    // border-radius: 25px;
+    border-radius: 35px 0 0 35px;
+    .order-reference-body{
+        padding: 20px;
+    }
+    .order-reference-header{
+        margin-bottom: 2em;
+        p{
+            margin-bottom: 0.1em;
+            margin-top: 0.1em;
+        }
+        .or-reference{
+            height: 14px;
+            width: 115px;
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 19px;
+        }
+        .or-order{
+            height: 25px;
+            width: 149px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 25px;
+        }
+    }
+
+    .order-reference-address{
+        position: absolute;
+        display: flex;
+        margin-top:10px;
+        flex-direction: column;
+        align-items: center;
+        gap:1rem;
+        .or-line-address{
+            width: 1px;
+            border:none;
+            height: 61px;
+            background: linear-gradient(to bottom, rgb(116, 116, 116), rgb(26, 25, 25));  
+        }
+    }
+
+    .order-reference-pickup{
+        // Revisar padding-left y left, es mejor con padding-left y px
+        // background-color: red;
+        padding-left: 20px;
+        position: relative;
+        width: calc(100% - 10%);
+        left:calc(10%);
+        p{
+            margin-bottom: 0.2em;
+            margin-top:0.2em;
+        }
+        .or-status-pickup{
+            background-color: #171A1D;
+            width: fit-content;
+            border-radius: 10px;
+            font-size:12px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 16px;
+            padding:2px;
+        }
+        .or-pickup-p{
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+            color:#7B7B7B;
+        }
+        .or-pickup-state{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+        }
+        .or-pickup-street{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+        }
+        // .or-pickup-date{
+        //     // background-color:red;
+        //     position:absolute;
+        //     width: fit-content;
+        //     margin-right: 40px;
+        //     right:0;
+        //     top:10px;
+        //     .or-date-day{
+        //         color:#979797;
+        //         font-size: 12px;
+        //         font-weight: 500;
+        //         letter-spacing: 0;
+        //         line-height: 16px;
+        //     }
+        //     .or-hour{
+        //         position: absolute;
+        //         right: 0;
+        //     }
+        // }
+    }
+
+
+
+    .order-reference-dropoff{
+        position: relative;
+        // margin-top: 1px;
+        padding-top:20px;
+        padding-left:20px;
+        // background-color: red;
+        width:calc(100% - 10%);
+        left:calc(10%);
+        p{
+            margin-bottom: 0.2em;
+            margin-top: 0.2em;
+        }
+        .or-status-dropoff{
+            background-color: #171A1D;
+            width: fit-content;
+            border-radius: 10px;
+            font-size:12px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 16px;
+            padding:2px;
+        }
+        .or-dropoff-p{
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+            color:#7B7B7B;
+        }
+        .or-dropoff-state{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+        }
+        .or-dropoff-state{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 14px;
+        }
+        // .or-dropoff-date{
+        //     // background-color:blue;
+        //     position:absolute;
+        //     right:0;
+        //     bottom:20px; 
+        //     margin-right: 40px;
+        //     padding-top: 0;
+        //     .or-date-day{
+        //         color:#979797;
+        //         font-size: 12px;
+        //         font-weight: 500;
+        //         letter-spacing: 0;
+        //         line-height: 16px;
+        //     }
+        //     .or-hour{
+        //         position: absolute;
+        //         right: 0;
+        //     }
+        // }
+
+    }
+}

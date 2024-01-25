@@ -1,1 +1,21 @@
-<p>cargo-details works!</p>
+<app-header [title]="title"></app-header>
+<app-order-detail></app-order-detail>
+<app-track-card></app-track-card>
+
+
+<div class="pickup-data">
+    <button (click)="open()">Pickup Data</button>
+
+    <div class="pickup-data-info">
+        @if (openBnd) {
+        <ng-container>
+            <p>Isidro Fabela 10, Valle Verde Y Terminal, <br>50140 Toluca de Lerdo, México.</p>
+            <p>14 de Octubre 2023 10:30</p>
+            <p>+52 55 67 89 0346</p>
+            <p>johndoe&#64;gmail.com</p>
+        </ng-container>
+        }
+
+    </div>
+    
+</div>

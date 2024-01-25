@@ -1,1 +1,22 @@
-<app-cargo-orders></app-cargo-orders>
+
+<!-- Header -->
+<app-header [title]="title"></app-header>
+
+<!-- Upcoming-Completed-Past -->
+<div class="tabs-container">
+    <p>Upcoming</p>
+    <p>Completed</p>
+    <p>Past</p>
+</div>
+
+<!-- Searcher -->
+<div class="search-container">
+    <input type="text" placeholder="Search..">
+</div>
+
+@for (order of data; track $index) {
+    <app-cargo-orders [number_order]="order.orderNumber" [type]="order.type"></app-cargo-orders>
+}
+
+
+<!-- <app-cargo-details></app-cargo-details> -->
