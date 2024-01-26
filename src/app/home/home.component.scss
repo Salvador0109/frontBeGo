@@ -21,7 +21,20 @@ input[type=text]{
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid #2C2C2C;
+    text-indent: 15px;
 }
 input:focus{
     outline:none;
+}
+
+.search-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    img{
+        margin-bottom: 8px;
+        position: absolute;
+    }
 }

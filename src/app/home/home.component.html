@@ -13,9 +13,12 @@
 @if(!bndDetail){
     <ng-container>
         <div class="search-container">
-            <input type="text" placeholder="Search..">
+            <img src="../../assets/inspect/App BeGo/Contenedores/Cargo Orders/Search/Group/search.svg" alt="">
+            <input type="text" placeholder="Search.." [(ngModel)]="search">
         </div>
         </ng-container>
+
+
 @for (order of data; track $index) {
     <app-cargo-orders [number_order]="order.orderNumber" 
                       [type]="order.type" 

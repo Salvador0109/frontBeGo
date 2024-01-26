@@ -4,6 +4,7 @@ import { HeaderComponent } from '../../components/header/header.component';
 import { CargoOrdersComponent } from './cargo-orders/cargo-orders.component';
 import { CargoDetailsComponent } from './cargo-orders/cargo-details/cargo-details.component';
 import { ApiService } from '../service/api.service';
+import { FormsModule } from '@angular/forms';
 
 export interface data{
   orderNumber:string;
@@ -31,13 +32,14 @@ export interface dataDetail{
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CargoOrdersComponent, CargoDetailsComponent, HeaderComponent],
+  imports: [CargoOrdersComponent, CargoDetailsComponent, HeaderComponent, FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
   public title = "Cargo Orders";
   
+  public search:string='';
   public data: data[] = [];
   public dataDetail!:dataDetail;
 
@@ -88,14 +90,16 @@ export class HomeComponent implements OnInit {
               start_date: order.start_date,
               end_date: order.end_date
             };
-          });
+          }
+          );
         }
-        // console.log("this.data..", this.data);
-      }, error:(error)=>{
+      }, 
+      error:(error)=>{
         console.log("Ocurrio un error...", error);
       }
     })
   }
+
 
 
   public listDataOrders(){
